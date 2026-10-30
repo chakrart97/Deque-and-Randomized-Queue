@@ -60,9 +60,11 @@ public class Deque<Item> implements Iterable<Item> {
         }
         Node oldFirst = head.next;
         Node newFirst = new Node();
+        head.next = newFirst;
         newFirst.item = item;
         newFirst.next = oldFirst;
         newFirst.prev = head;
+        oldFirst.prev = newFirst;
         ++size;
     }
 
@@ -84,8 +86,10 @@ public class Deque<Item> implements Iterable<Item> {
         Node oldLast = tail.prev;
         Node newLast = new Node();
         oldLast.next = newLast;
+        newLast.item = item;
         newLast.next = tail;
         newLast.prev = oldLast;
+        tail.prev = newLast;
         ++size;
     }
 

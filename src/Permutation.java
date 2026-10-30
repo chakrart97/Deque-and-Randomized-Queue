@@ -16,5 +16,6 @@ public class Permutation {
         // TODO: Act as the card dealer: read the deck from standard input and deal k random cards.
         // Hint: use a Scanner to read card names: Scanner scanner = new Scanner(System.in);
         //       then use scanner.next() to read each card, and System.out.println() to print dealt cards.
+
     }
 }
